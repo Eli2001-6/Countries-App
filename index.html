@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/13a38875df.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="shortcut icon" href="./images/earth.png" type="image/x-icon">
+  <title>Countries | Frontendmentor.io</title>
+</head>
+<body>
+  <main>
+    <header id="header">
+      <h1>Where in the world?</h1>
+      <i class="fa-regular fa-moon fa-l"><span class="color-toggle">  Dark Mode</span></i>
+    </header>
+    <section class="form-container">
+      <div class="search-container">
+        <button id="searchBtn" type="submit" class="search-btn">
+          <i id="searchImg" class="fa-solid fa-magnifying-glass"></i>
+        </button>
+        <input name="search" id="searchBar" class="search-field" placeholder="Search for a country..." data-search>
+      </div>
+
+      <div class="options">
+        <select id="regionFilter" class="region-filter" name="regionfilter" region-input>
+          <option value="" disabled selected>Filter by Region</option>
+          <option value="all">All</option>
+          <option value="africa">Africa</option>
+          <option value="america">America</option>
+          <option value="asia">Asia</option>
+          <option value="europe">Europe</option>
+          <option value="oceania">Oceania</option>
+        </select>
+      </div>
+    </section>
+    <section class="country-container" country-card-container>
+      <template country-template>
+        <figure id="countryBox" class="country-box" country-card-mode>
+          <img id="countryImg" class="country-img" src="" alt="" srcset="" country-flag>
+          <div class="country-small-details">
+            <h2 class="country-name" country-name></h2>
+            <p>
+              Population: <span class="population" country-population></span>
+            </p>
+            <p>
+              Region: <span class="region" country-region></span>
+            </p>
+            <p>
+              Capital: <span class="capital" country-capital></span>
+            </p>
+          </div>
+        </figure>
+      </template>
+    </section>
+  </main>
+  <script src="./script.js"></script>
+</body>
+</html>
